@@ -9,10 +9,14 @@
     <h1>Forms and lables lesson</h1>
     <hr>
     <!-- input => inline element , self closing tag -->
-    <form>
+
+     <!-- the action attribute is the place where the data 
+      we put in the form will go  -->
+    <form method="post">
         <div>
             <!-- <label>username</label> -->
-            <input type="text" required placeholder="username">
+            <input type="text" required placeholder="username" name="user">
+            <!-- the name attribute is a parameter ==> query format -->
         </div>
         <br>
         <!-- <div>
@@ -22,11 +26,11 @@
         <br> -->
         <div>
             <!-- <label>password</label> -->
-            <input type="password" required placeholder="write a comlex pass">
+            <input type="password" required placeholder="write a comlex pass" name="pass">
         </div>
         <br>
         <div>
-            <input type="email" required placeholder="email">
+            <input type="email" required placeholder="email" name="mail">
         </div>
         <input type="submit">
     </form>
