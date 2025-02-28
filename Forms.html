@@ -8,31 +8,123 @@
 <body>
     <h1>Forms and lables lesson</h1>
     <hr>
+    <p>these are the full "form" lessons</p>
+    <hr>
     <!-- input => inline element , self closing tag -->
 
      <!-- the action attribute is the place where the data 
-      we put in the form will go  -->
-    <form method="post">
+      we put in the form will go  
+      
+      GET : will show the data puted in the url 
+      POST : will not
+      
+      -->
+    <form method="get">
         <div>
+            <input type="hidden" value="TOKEN">
             <!-- <label>username</label> -->
-            <input type="text" required placeholder="username" name="user">
+            <input type="text" required placeholder="username" name="user" value="Hesham" readonly>
             <!-- the name attribute is a parameter ==> query format -->
         </div>
-        <br>
-        <!-- <div>
-            <label>subject</label>
-            <input type="text">
-        </div>
-        <br> -->
+        <!-- the diffirence between readonly and disable 
+         readonly can't change the fieled
+         diabled willn't send AND edit the data to the server -->
+        <br> 
         <div>
             <!-- <label>password</label> -->
-            <input type="password" required placeholder="write a comlex pass" name="pass">
+            <input type="password" required placeholder="write a comlex pass" name="pass" autofocus minlength="10" maxlength="15 ">
         </div>
         <br>
         <div>
-            <input type="email" required placeholder="email" name="mail">
+            <input type="email" required placeholder="email" name="mail" value="h@mail.com" disabled>
+        </div>
+        <div>
+            <label>range</label>
+            <input type="range" name="range" min="0" max="100" step="10" value="0">
+        </div>
+        <br>
+        <div>
+            <label for="num">number</label>
+            <input id="num" type="number" name="number" min="0" max="100" step="1" value="0">
+        </div>
+        <br>
+        <!-- we'll connect the label with the input by an identifier -->
+        <div>
+            <input id="kali" type="radio" name="os" value="kali">
+            <label for="kali">kali</label>
+        </div>
+        <div>
+            <input id="windows" type="radio" name="os" value="windows">
+            <label for="windows">windows</label>
+        </div>
+        <div>
+            <input id="mac" type="radio" name="os" value="mac">
+            <label for="mac">mac</label>
+        </div>
+        <br>
+        <hr>
+        <!-- the difference  between checkbox and radio that that checkbox is a multible choose-->
+        <div>
+            <input id="kali1" type="checkbox" name="kali" value="kali">
+            <label for="kali1">kali</label>
+        </div>
+        <div>
+            <input id="win1" type="checkbox" name="os" value="windows">
+            <label for="win1">windows</label>
+        </div>
+        <div>
+            <input id="mac1" type="checkbox" name="os" value="mac">
+            <label for="mac1">mac</label>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <label for="Book"></label>
+            <select name="books" id="Book" multiple>
+                <optgroup label="romantic">
+                    <option value="1" selected>book1</option>
+                    <option value="2">book2</option>
+                    <option value="3">book3</option>
+                </optgroup>
+                <optgroup label="police">
+                    <option value="4">book4</option>
+                    <option value="5">book5</option>
+                    <option value="6">book6</option>
+                </optgroup>
+            </select>
+        </div>
+        <hr>
+        <div>
+            <label">search</label>
+            <input type="search">
+        </div>
+        <hr>
+        <div>
+            <label>url</label>
+            <input type="url">
+        </div>
+        <hr>
+        <div>
+            <label>upload</label>
+            <input type="file">
+        </div>
+        <hr>
+        <textarea name="subject" cols="" rows="" placeholder="comments"></textarea>
+        <hr>
+        <div>
+            <input list="programmig" name="prog">
+            <datalist id="programmig">
+                <option value="python"></option>
+                <option value="c++""></option>
+                <option value="c#"></option>
+                <option value="c"></option>
+                <option value="php"></option>
+                <option value="sql"></option>
+                <!-- i can search in it -->
+            </datalist>
         </div>
         <input type="submit">
+        <input type="reset" value="reset">
     </form>
 </body>
 </html>
